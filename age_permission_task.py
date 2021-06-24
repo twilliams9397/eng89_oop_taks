@@ -25,15 +25,19 @@ class Age_Permissions():
             return "You aren't legally old enough to drink but your friends older than 16 might help!"
 
     def school(self):
-        if self.age < 16:
-            return "You are too young, go back to school!"
-        else:
-            return "You have left school!"
+        return "You are too young, go back to school!"
 
 user = Age_Permissions()
-
-print(user.vote_and_drive())
-print(user.vote())
-print(user.drink())
-print(user.school())
-
+if user.age >=16:
+    while True:
+        check = str(input("What permission would you like to check?\n 1 for vote and drive\n 2 for vote\n 3 for drink\n Type 'Exit' at anytime to leave.\n"))
+        if check == "1":
+            print(user.vote_and_drive())
+        elif check == "2":
+            print(user.vote())
+        elif check == "3":
+            print(user.drink())
+        elif check.capitalize() == "Exit":
+            break
+else:
+    print(user.school())
