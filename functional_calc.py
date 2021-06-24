@@ -20,4 +20,17 @@ class FunctionalCalc(CalcFunctions):
         return self.x * self.y
 
 functional_calc = FunctionalCalc()
-print(functional_calc.circle_area())
+
+while True:
+    func2 = str(input("Would you like the extra functions?\n1 for circle area\n2 for square area"
+                      "\n3 for rectangle area\n type 'Exit' to finish\n"))
+    if func2 == "1":
+        print(functional_calc.circle_area())
+    elif func2 == "2":
+        print(functional_calc.square_area())
+    elif func2 == "3":
+        print(functional_calc.rectangle_area())
+    elif func2.capitalize() == "Exit":
+        break
+    else:
+        print("Unrecognised input, please try again")
