@@ -30,7 +30,8 @@ class Age_Permissions():
 user = Age_Permissions()
 if user.age >=16:
     while True:
-        check = str(input("What permission would you like to check?\n 1 for vote and drive\n 2 for vote\n 3 for drink\n Type 'Exit' at anytime to leave.\n"))
+        check = str(input("What permission would you like to check?\n 1 for vote and drive\n 2 for vote\n 3 for "
+                          "drink\n Type 'Exit' at anytime to leave.\n"))
         if check == "1":
             print(user.vote_and_drive())
         elif check == "2":
